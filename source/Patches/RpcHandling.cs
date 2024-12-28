@@ -1419,8 +1419,8 @@ namespace TownOfUs
                     if (CustomGameOptions.GameMode == GameMode.Classic && CustomGameOptions.VampireOn > 0)
                         NeutralKillingRoles.Add((typeof(Vampire), CustomGameOptions.VampireOn, true));
 
-                    if ((CheckJugg() || CustomGameOptions.GameMode == GameMode.AllAny) && CustomGameOptions.HiddenRoles)
-                        NeutralKillingRoles.Add((typeof(Juggernaut), 100, true));
+                    //if ((CheckJugg() || CustomGameOptions.GameMode == GameMode.AllAny) && CustomGameOptions.HiddenRoles)
+                    //    NeutralKillingRoles.Add((typeof(Juggernaut), 100, true));
                     #endregion
                     #region Impostor Roles
                     if (CustomGameOptions.UndertakerOn > 0)
