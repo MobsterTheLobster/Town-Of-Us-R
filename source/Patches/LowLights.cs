@@ -2,6 +2,7 @@ using AmongUs.GameOptions;
 using HarmonyLib;
 using TownOfUs.Extensions;
 using TownOfUs.Roles;
+using TownOfUs.Roles.Modifiers;
 using UnityEngine;
 
 namespace TownOfUs
@@ -30,6 +31,12 @@ namespace TownOfUs
             if (player == null || player.IsDead)
             {
                 __result = __instance.MaxLightRadius;
+                return false;
+            }
+
+            if (Modifier.GetModifier(player._object)?.ModifierType == ModifierEnum.Blind)
+            {
+                __result = 0.6f * CustomGameOptions.BlindDistanceMultiplier;
                 return false;
             }
 
@@ -62,9 +69,11 @@ namespace TownOfUs
             var t = switchSystem != null ? switchSystem.Value / 255f : 1;
 
             if (player._object.Is(ModifierEnum.Torch)) t = 1;
+            //if (player._object.Is(ModifierEnum.Blind)) t = 0;
 
             __result = Mathf.Lerp(__instance.MinLightRadius, __instance.MaxLightRadius, t) *
                        GameOptionsManager.Instance.currentNormalGameOptions.CrewLightMod;
+            //__result = 0;
             return false;
         }
     }

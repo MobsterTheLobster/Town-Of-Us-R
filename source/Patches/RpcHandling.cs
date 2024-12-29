@@ -1479,6 +1479,9 @@ namespace TownOfUs
                         CrewmateModifiers.Add((typeof(Frosty), CustomGameOptions.FrostyOn));
                     #endregion
                     #region Global Modifiers
+                    if (Check(CustomGameOptions.BlindOn))
+                        GlobalModifiers.Add((typeof(Blind), CustomGameOptions.BlindOn));
+
                     if (Check(CustomGameOptions.TiebreakerOn))
                         GlobalModifiers.Add((typeof(Tiebreaker), CustomGameOptions.TiebreakerOn));
 

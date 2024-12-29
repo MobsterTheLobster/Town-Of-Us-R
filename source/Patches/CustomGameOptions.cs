@@ -81,6 +81,7 @@ namespace TownOfUs
         public static int JailorOn => (int)Generate.JailorOn.Get();
         public static int SoulCollectorOn => (int)Generate.SoulCollectorOn.Get();
         public static int TorchOn => (int)Generate.TorchOn.Get();
+        public static int BlindOn => (int)Generate.BlindOn.Get();
         public static int DiseasedOn => (int)Generate.DiseasedOn.Get();
         public static int FlashOn => (int)Generate.FlashOn.Get();
         public static int TiebreakerOn => (int)Generate.TiebreakerOn.Get();
@@ -263,6 +264,7 @@ namespace TownOfUs
         public static bool BlackmailInvisible => Generate.BlackmailInvisible.Get();
         public static float GiantSlow => Generate.GiantSlow.Get();
         public static float FlashSpeed => Generate.FlashSpeed.Get();
+        public static float BlindDistanceMultiplier => Generate.BlindDistance.Get();
         public static float DiseasedMultiplier => Generate.DiseasedKillMultiplier.Get();
         public static float BaitMinDelay => Generate.BaitMinDelay.Get();
         public static float BaitMaxDelay => Generate.BaitMaxDelay.Get();

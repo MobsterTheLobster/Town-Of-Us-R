@@ -69,6 +69,7 @@ namespace TownOfUs
     {
         Lover,
         Torch,
+        Blind,
         Diseased,
         Flash,
         Tiebreaker,

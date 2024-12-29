@@ -83,6 +83,7 @@ namespace TownOfUs.CustomOption
         public static CustomNumberOption FrostyOn;
         public static CustomNumberOption MultitaskerOn;
         public static CustomNumberOption TorchOn;
+        public static CustomNumberOption BlindOn;
 
         public static CustomHeaderOption GlobalModifiers;
         public static CustomNumberOption ButtonBarryOn;
@@ -474,6 +475,9 @@ namespace TownOfUs.CustomOption
         public static CustomHeaderOption Flash;
         public static CustomNumberOption FlashSpeed;
 
+        public static CustomHeaderOption Blind;
+        public static CustomNumberOption BlindDistance;
+
         public static CustomHeaderOption Diseased;
         public static CustomNumberOption DiseasedKillMultiplier;
 
@@ -642,6 +646,8 @@ namespace TownOfUs.CustomOption
             MultitaskerOn = new CustomNumberOption(num++, MultiMenu.modifiers, "<color=#FF804DFF>Multitasker</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             TorchOn = new CustomNumberOption(num++, MultiMenu.modifiers, "<color=#FFFF99FF>Torch</color>", 0f, 0f, 100f, 10f,
+                PercentFormat);
+            BlindOn = new CustomNumberOption(num++, MultiMenu.modifiers, "<color=#25257FFF>Blind</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
             GlobalModifiers = new CustomHeaderOption(num++, MultiMenu.modifiers, "Global Modifiers");
@@ -1258,6 +1264,9 @@ namespace TownOfUs.CustomOption
 
             Flash = new CustomHeaderOption(num++, MultiMenu.modifiers, "<color=#FF8080FF>Flash</color>");
             FlashSpeed = new CustomNumberOption(num++, MultiMenu.modifiers, "Flash Speed", 1.25f, 1.05f, 2.5f, 0.05f, MultiplierFormat);
+
+            Blind = new CustomHeaderOption(num++, MultiMenu.modifiers, "<color=#25257FFF>Blind</color>");
+            BlindDistance = new CustomNumberOption(num++, MultiMenu.modifiers, "Blind Sight Multiplier", 1f, 0f, 2.5f, 0.1f, MultiplierFormat);
 
             Giant = new CustomHeaderOption(num++, MultiMenu.modifiers, "<color=#FFB34DFF>Giant</color>");
             GiantSlow = new CustomNumberOption(num++, MultiMenu.modifiers, "Giant Speed", 0.75f, 0.25f, 1f, 0.05f, MultiplierFormat);
